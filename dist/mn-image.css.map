@@ -1,0 +1,1 @@
+{"version":3,"sources":["specs/img.scss"],"names":[],"mappings":"AAAA,SACE,eACA,YACA,kBACA,qBACA,eAAiB,CALnB,aAQI,WACA,iBAAmB,CACpB","file":"mn-image.css","sourcesContent":["mn-image {\n  max-width: 100%;\n  width: 400px;\n  position: relative;\n  display: inline-block;\n  overflow: hidden;\n\n  img {\n    width: 100%;\n    border-radius: 5px;\n  }\n}\n"],"sourceRoot":"/source/"}
