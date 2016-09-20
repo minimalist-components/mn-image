@@ -14,6 +14,9 @@ function mnImage() {
     {
       name: 'src',
     },
+    {
+      name: 'alt',
+    },
   ];
 
   // image element
