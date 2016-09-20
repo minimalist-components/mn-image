@@ -37,14 +37,19 @@ function mnImage() {
     let percentX = (event.clientX - bounds.left) / bounds.width;
     let percentY = (event.clientY - bounds.top) / bounds.height;
     let angles = 20;
-    let translateY = (angles * (-percentX * 2)) + angles;
-    let translateX = (angles * (percentY * 2)) - angles;
+    let rotateY = (angles * (-percentX * 2)) + angles;
+    let rotateX = (angles * (percentY * 2)) - angles;
     this.style.transform = `
       scale(1.07)
       perspective(1000px)
-      rotateY(${translateY}deg)
-      rotateX(${translateX}deg)
+      rotateY(${rotateY}deg)
+      rotateX(${rotateX}deg)
     `;
+    // console.log(event.clientX - bounds.left);
+    // let translateX = (bounds.width  / 2) - (event.clientX - bounds.left);
+    // let translateY;
+    // console.log(translateX);
+    // this.style.transform = `translate(${translateX)}px ${parseInt(translateY)}px)`;
   }
 
   function unsetRotate3d() {

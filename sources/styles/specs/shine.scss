@@ -4,15 +4,15 @@ mn-image {
     position: absolute;
     top: 0; left: 0;
     bottom: 0; right: 0;
-    background: red;//linear-gradient(135deg, rgba(255,255,255,.25) 0%,rgba(255,255,255,0) 60%);
-    opacity: 0;
+    // background-image: radial-gradient(circle, rgba(255,0,0,1), transparent, transparent, transparent);
+    // opacity: 0;
     border-radius: inherit;
-    transform: all 2s ease-out;
+    transition: opacity .2s ease-out;
   }
 
-  // &:hover, &:focus {
-  //   .shine {
-  //     opacity: 1;
-  //   }
-  // }
+  &:hover, &:focus {
+    .shine {
+      opacity: 1;
+    }
+  }
 }
