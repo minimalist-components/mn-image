@@ -6,13 +6,18 @@ mn-image {
   transform: perspective(1000px) rotateY(0deg);
   border-radius: 5px;
 
-  &:focus, &:hover {
-    transform: scale(1.07);
-  }
-
   img {
     width: 100%;
     border-radius: inherit;
     position: relative;
   }
+}
+
+.no-outline {
+  outline: 0;
+}
+
+a:focus mn-image,
+mn-image:hover {
+  transform: scale(1.07);
 }
