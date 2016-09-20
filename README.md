@@ -4,7 +4,7 @@ A image component with 3d perspective on hover/focus.
 
 See the [demo](http://codepen.io/darlanmendonca/full/BLLvBW/)
 
-<!-- [![preview demo](https://raw.githubusercontent.com/minimalist-components/mn-image/master/sources/example/mn-image.gif)](http://codepen.io/darlanmendonca/full/akgXQq) -->
+[![preview demo](https://raw.githubusercontent.com/minimalist-components/mn-image/master/sources/imgs/preview.gif)](http://codepen.io/darlanmendonca/full/BLLvBW)
 
 ### Install
 
