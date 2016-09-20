@@ -34,8 +34,8 @@ function mnImage() {
 
   function setRotation3d(event) {
     let bounds = this.getBoundingClientRect();
-    let percentX = (event.pageX - bounds.left) / bounds.width;
-    let percentY = (event.pageY - bounds.top) / bounds.height;
+    let percentX = (event.clientX - bounds.left) / bounds.width;
+    let percentY = (event.clientY - bounds.top) / bounds.height;
     let angles = 20;
     let translateY = (angles * (-percentX * 2)) + angles;
     let translateX = (angles * (percentY * 2)) - angles;
