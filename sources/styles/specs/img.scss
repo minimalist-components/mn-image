@@ -1,12 +1,18 @@
 mn-image {
   max-width: 100%;
-  width: 400px;
   position: relative;
   display: inline-block;
-  overflow: hidden;
+  transition: transform .2s ease-out;
+  transform: perspective(1000px) rotateY(0deg);
+  border-radius: 5px;
+
+  &:focus, &:hover {
+    transform: scale(1.07);
+  }
 
   img {
     width: 100%;
-    border-radius: 5px;
+    border-radius: inherit;
+    position: relative;
   }
 }

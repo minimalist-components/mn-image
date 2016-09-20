@@ -2,7 +2,10 @@
 
 let prototype = Object.create(HTMLElement.prototype);
 prototype.createdCallback = mnImage;
-document.registerElement('mn-image', {prototype});
+document.registerElement('mn-image', {
+  prototype,
+  // extends: 'a',
+});
 
 function mnImage() {
   let element = this;
@@ -11,18 +14,42 @@ function mnImage() {
     {
       name: 'src',
     },
-    {
-      name: 'width',
-    },
-    {
-      name: 'height',
-    },
   ];
 
   // image element
   let image = document.createElement('img');
   imageAttributes.map(setImageAttribute);
   element.appendChild(image);
+
+  // shine element
+  let shine = document.createElement('div');
+  shine.classList.add('shine');
+  element.appendChild(shine);
+
+  element.addEventListener('mouseenter', setRotation3d);
+  element.addEventListener('mousemove', setRotation3d);
+  element.addEventListener('touchstart', setRotation3d);
+  element.addEventListener('touchmove', setRotation3d);
+  element.addEventListener('mouseout', unsetRotate3d);
+
+  function setRotation3d(event) {
+    let bounds = this.getBoundingClientRect();
+    let percentX = (event.pageX - bounds.left) / bounds.width;
+    let percentY = (event.pageY - bounds.top) / bounds.height;
+    let angles = 20;
+    let translateY = (angles * (-percentX * 2)) + angles;
+    let translateX = (angles * (percentY * 2)) - angles;
+    this.style.transform = `
+      scale(1.07)
+      perspective(1000px)
+      rotateY(${translateY}deg)
+      rotateX(${translateX}deg)
+    `;
+  }
+
+  function unsetRotate3d() {
+    this.style.transform = '';
+  }
 
   function setImageAttribute(attribute) {
     let isDefaultAttribute = attribute.hasOwnProperty('default');
