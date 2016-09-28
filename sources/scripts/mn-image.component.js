@@ -4,7 +4,6 @@ let prototype = Object.create(HTMLElement.prototype);
 prototype.createdCallback = mnImage;
 document.registerElement('mn-image', {
   prototype,
-  // extends: 'a',
 });
 
 function mnImage() {
@@ -23,11 +22,6 @@ function mnImage() {
   let image = document.createElement('img');
   imageAttributes.map(setImageAttribute);
   element.appendChild(image);
-
-  // shine element
-  let shine = document.createElement('div');
-  shine.classList.add('shine');
-  element.appendChild(shine);
 
   element.addEventListener('mouseenter', setRotation3d);
   element.addEventListener('mousemove', setRotation3d);
