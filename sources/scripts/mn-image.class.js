@@ -1,5 +1,3 @@
-'use strict';
-
 let prototype = Object.create(HTMLElement.prototype);
 prototype.createdCallback = mnImage;
 document.registerElement('mn-image', {
@@ -42,11 +40,6 @@ function mnImage() {
       rotateY(${rotateY}deg)
       rotateX(${rotateX}deg)
     `;
-    // console.log(event.clientX - bounds.left);
-    // let translateX = (bounds.width  / 2) - (event.clientX - bounds.left);
-    // let translateY;
-    // console.log(translateX);
-    // this.style.transform = `translate(${translateX)}px ${parseInt(translateY)}px)`;
   }
 
   function unsetRotate3d() {
@@ -71,3 +64,9 @@ function mnImage() {
     }
   }
 }
+
+class MnImage extends HTMLElement {
+
+}
+
+customElements.define('mn-image', MnImage);

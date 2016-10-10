@@ -11,5 +11,8 @@
     "Darlan Mendonça <darlanmendonca@gmail.com>"
   ],
   "license": "MIT",
-  "homepage": ""
+  "homepage": "",
+  "dependencies": {
+    "document-register-element": "^1.2.0"
+  }
 }
