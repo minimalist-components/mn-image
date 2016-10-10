@@ -5,6 +5,7 @@ mn-image {
   transition: transform .2s ease-out;
   transform: perspective(1000px) rotateY(0deg);
   border-radius: 5px;
+  margin: 1em 0;
 
   img {
     width: 100%;
