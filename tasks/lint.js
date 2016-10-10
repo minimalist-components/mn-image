@@ -1,14 +1,13 @@
-'use strict';
-
-let gulp = require('gulp');
-let config = require('./gulp.config.js');
-let eslint = require('gulp-eslint');
+import gulp from 'gulp';
+import eslint from 'gulp-eslint';
+import gutil from 'gulp-util';
+import {lintScripts as scripts} from './config.js';
 
 gulp.task('lint', lintTask);
 
 function lintTask() {
   return gulp
-    .src(config.lintScripts)
+    .src(scripts)
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())
@@ -16,6 +15,5 @@ function lintTask() {
 }
 
 function beep() {
-  let gutil = require('gulp-util');
   gutil.beep();
 }

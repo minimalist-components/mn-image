@@ -1,7 +1,7 @@
 {
   "name": "mn-image",
   "private": true,
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,6 +13,7 @@
     "babel-preset-es2015": "^6.14.0",
     "bower-files": "^3.13.3",
     "browser-sync": "^2.14.0",
+    "compression": "^1.6.2",
     "connect-history-api-fallback": "^1.3.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
