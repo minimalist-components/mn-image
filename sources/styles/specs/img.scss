@@ -22,4 +22,5 @@ a:focus mn-image,
 mn-image:hover {
   transform: scale(1.07);
   will-change: transform;
+  z-index: 10;
 }
