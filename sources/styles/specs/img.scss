@@ -3,9 +3,10 @@ mn-image {
   position: relative;
   display: inline-block;
   transition: transform .2s ease-out;
-  transform: perspective(1000px) rotateY(0deg);
+  transform: perspective(1000px) scale(1) translateZ(0);
   border-radius: 5px;
   margin: 1em 0;
+  will-change: transform;
 
   img {
     width: 100%;
@@ -21,7 +22,6 @@ mn-image {
 
 a:focus mn-image,
 mn-image:hover {
-  transform: scale(1.07);
-  will-change: transform;
+  transform: perspective(1000px) scale(1.07) translateZ(0);
   z-index: 10;
 }
