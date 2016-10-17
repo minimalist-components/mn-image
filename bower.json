@@ -1,6 +1,6 @@
 {
   "name": "mn-image",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A image component with 3d perspective on hover/focus.",
   "main": [
     "dist/mn-image.css",

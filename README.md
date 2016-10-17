@@ -28,3 +28,13 @@ And then, in your html, you can use the tag ```mn-image``` i.e.
 ```html
 <mn-image src="path/to/an/image"></mn-image>
 ```
+
+### 3d perspective
+
+If you want a 3d perspective on mouse over, just put the component inside a tag a
+
+```html
+<a href="#">
+  <mn-image src="path/to/an/image"></mn-image>
+</a>
+```
