@@ -2,7 +2,14 @@ class MnImage extends HTMLElement {
   constructor(self) {
     self = super(self);
     this.setImage();
+    this.setOutline();
     return self;
+  }
+
+  setOutline() {
+    if (this.parentElement.tagName === 'A') {
+      this.parentElement.classList.add('no-outline');
+    }
   }
 
   setImage() {
