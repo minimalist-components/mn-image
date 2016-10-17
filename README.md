@@ -38,3 +38,10 @@ If you want a 3d perspective on mouse over, just put the component inside a tag 
   <mn-image src="path/to/an/image"></mn-image>
 </a>
 ```
+
+And if you want more, the following attributes from inputs are supported in this component
+
+- [src](http://www.w3schools.com/tags/att_img_src.asp)
+- [alt](http://www.w3schools.com/tags/att_img_alt.asp)
+- [title](http://www.w3schools.com/tags/att_global_title.asp)
+- [draggable](http://www.w3schools.com/tags/att_global_draggable.asp)

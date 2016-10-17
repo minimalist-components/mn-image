@@ -21,6 +21,12 @@ class MnImage extends HTMLElement {
       {
         name: 'alt',
       },
+      {
+        name: 'title',
+      },
+      {
+        name: 'draggable',
+      },
     ];
 
     // image element
