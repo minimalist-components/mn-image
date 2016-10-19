@@ -10,8 +10,12 @@ mn-image {
 }
 
 a:focus mn-image,
-a mn-image:hover {
+a:hover mn-image {
   &:before {
     box-shadow: 0 45px 100px rgba(14,21,47,0.4), 0 16px 40px rgba(14,21,47,0.4);
   }
+}
+
+a:active mn-image:before {
+  box-shadow: 0 20px 50px rgba(14,21,47,0.4);
 }

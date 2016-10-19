@@ -20,7 +20,11 @@ a.no-outline {
 }
 
 a:focus mn-image,
-a mn-image:hover {
+a:hover mn-image {
   transform: perspective(1000px) scale(1.07) translateZ(0);
   z-index: 10;
+}
+
+a:active mn-image {
+  transform: perspective(1000px) scale(1.04) translateZ(0);
 }
