@@ -4,8 +4,7 @@
   "description": "A image component with 3d perspective on hover/focus.",
   "main": [
     "dist/mn-image.css",
-    "dist/mn-image.js",
-    "sources/styles/mn-image.scss"
+    "dist/mn-image.js"
   ],
   "authors": [
     "Darlan Mendonça <darlanmendonca@gmail.com>"
