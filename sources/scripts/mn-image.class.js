@@ -3,6 +3,8 @@ class MnImage extends HTMLElement {
     self = super(self);
     this.setImage();
     this.setOutline();
+    this.setRotation();
+    this.setBlur();
     return self;
   }
 
@@ -34,6 +36,26 @@ class MnImage extends HTMLElement {
     attributes.map(setAttribute);
     this.appendChild(image);
 
+    function setAttribute(attribute) {
+      let isDefaultAttribute = attribute.hasOwnProperty('default');
+      let attributeValue = element.getAttribute(attribute.name);
+
+      if (isDefaultAttribute) {
+        let isValidValue = attribute.hasOwnProperty('values')
+          && attribute.values.indexOf(attributeValue) >= 0;
+
+        let value = isValidValue
+          ? attributeValue
+          : attribute.default;
+
+        image.setAttribute(attribute.name, value);
+      } else if (attributeValue) {
+        image.setAttribute(attribute.name, attributeValue);
+      }
+    }
+  }
+
+  setRotation() {
     this.addEventListener('mouseenter', setRotation3d);
     this.addEventListener('mousemove', setRotation3d);
     this.addEventListener('mouseout', unsetRotate3d);
@@ -68,23 +90,17 @@ class MnImage extends HTMLElement {
     function unsetRotate3d() {
       this.style.transform = '';
     }
+  }
 
-    function setAttribute(attribute) {
-      let isDefaultAttribute = attribute.hasOwnProperty('default');
-      let attributeValue = element.getAttribute(attribute.name);
+  setBlur() {
+    if (this.parentElement.tagName === 'A') {
+      this.parentElement.addEventListener('click', blur);
+      this.parentElement.addEventListener('mouseleave', blur);
+      this.parentElement.addEventListener('touchmove', blur);
+    }
 
-      if (isDefaultAttribute) {
-        let isValidValue = attribute.hasOwnProperty('values')
-          && attribute.values.indexOf(attributeValue) >= 0;
-
-        let value = isValidValue
-          ? attributeValue
-          : attribute.default;
-
-        image.setAttribute(attribute.name, value);
-      } else if (attributeValue) {
-        image.setAttribute(attribute.name, attributeValue);
-      }
+    function blur() {
+      this.blur();
     }
   }
 }
