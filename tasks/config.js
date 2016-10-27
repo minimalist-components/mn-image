@@ -9,6 +9,10 @@ module.exports = {
     dest: './dist/',
     sourcemaps: '/sources/styles',
   },
+  imgs: {
+    src: './sources/imgs/*',
+    dest: './public/imgs',
+  },
   scripts: {
     src: [
       './sources/**/*.js',
