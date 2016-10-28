@@ -18,6 +18,7 @@ Or just download the main files ```dist/mn-image.css, dist/mn-image.js``` in you
 
 ```html
 <link rel="stylesheet" href="path/to/dist/mn-image.css">
+<script src="path/to/dist/vendor.js"></script>
 <script src="path/to/dist/mn-image.js"></script>
 ```
 
