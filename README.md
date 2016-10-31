@@ -1,4 +1,6 @@
-# Minimalist image
+[![Bower version](https://badge.fury.io/bo/mn-image.svg)](https://badge.fury.io/bo/mn-image)
+
+# mn-image
 
 A image component with 3d perspective on hover/focus.
 
