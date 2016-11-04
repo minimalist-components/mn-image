@@ -17,6 +17,7 @@ mn-image {
 
 a.no-outline {
   outline: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a:focus mn-image,
@@ -27,4 +28,10 @@ a:hover mn-image {
 
 a:active mn-image {
   transform: perspective(1000px) scale(1.04) translateZ(0);
+}
+
+@media (hover: none) {
+  a:hover, a:active, a:focus {
+    mn-image {transform: none !important}
+  }
 }
