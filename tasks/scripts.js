@@ -5,7 +5,6 @@ import sourcemaps from 'gulp-sourcemaps';
 import plumber from 'gulp-plumber';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
-import rename from 'gulp-rename';
 import {scripts} from './config.js';
 
 gulp.task('scripts', scriptsTask);
@@ -16,9 +15,8 @@ function scriptsTask() {
     .pipe(plumber({errorHandler}))
     .pipe(sourcemaps.init())
     .pipe(babel())
-    .pipe(concat('app.js'))
+    .pipe(concat(scripts.output))
     .pipe(uglify({mangle: false}))
-    .pipe(rename('mn-image.js'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(scripts.dest));
 }

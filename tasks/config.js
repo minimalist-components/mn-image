@@ -8,6 +8,7 @@ module.exports = {
     watch: './sources/styles/**/*.scss',
     dest: './dist/',
     sourcemaps: '/sources/styles',
+    output: 'mn-image.css',
   },
   imgs: {
     src: './sources/imgs/*',
@@ -19,6 +20,7 @@ module.exports = {
       '!./sources/**/*.spec.js',
     ],
     dest: './dist/',
+    output: 'mn-image.js',
   },
   lintScripts: [
     './gulpfile.js',
