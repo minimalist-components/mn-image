@@ -44,7 +44,7 @@ If you want a 3d perspective on mouse over, or focus (both only for desktop) jus
 </a>
 ```
 
-And if you want more, the following attributes from inputs are supported in this component
+And if you want more, the following attributes from image are supported in this component
 
 - [src](http://www.w3schools.com/tags/att_img_src.asp)
 - [alt](http://www.w3schools.com/tags/att_img_alt.asp)
