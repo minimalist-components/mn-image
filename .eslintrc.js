@@ -14,7 +14,7 @@ module.exports = {
     customElements: true,
   },
   rules: {
-    semi: [required, 'always'],
+    semi: [required, 'never'],
     curly: [required, 'all'],
     'brace-style': [required, '1tbs'],
     quotes: [required, 'single'],
