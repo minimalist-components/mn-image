@@ -12,19 +12,13 @@ See the [demo](http://codepen.io/darlanmendonca/full/BLLvBW/)
 
 ### Install
 
-With bower
-
 ```sh
 bower install --save mn-image
 ```
 
 Or just download the main files ```dist/mn-image.css, dist/mn-image.js``` in your project, and make a reference to their, like:
 
-```html
-<link rel="stylesheet" href="path/to/dist/mn-image.css">
-<script src="path/to/dist/vendor.js"></script>
-<script src="path/to/dist/mn-image.js"></script>
-```
+Or just download the main files, located in [dist/](https://github.com/minimalist-components/mn-image/tree/master/dist)
 
 ### Usage
 
