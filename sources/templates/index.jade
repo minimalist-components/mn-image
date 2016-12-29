@@ -27,6 +27,18 @@ body
       a(href='#'): mn-image(src='http://15858-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/sites/default/files/images/19bigstockKoalaBearsleepinginatree15688901jpg.jpg')
       a(href='#'): mn-image(src='https://s-media-cache-ak0.pinimg.com/originals/90/23/ce/9023ce4196add2eb853627bbc53b272a.jpg')
       a(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
+
+  script.
+    const images = document.querySelectorAll('mn-image')
+    Array
+      .from(images)
+      .forEach(disableClick)
+
+    function disableClick(image) {
+      image.addEventListener('click', function(event) {
+        event.preventDefault()
+      })
+    }
   
   script
     include ../../docs/vendor.js
