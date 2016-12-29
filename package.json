@@ -31,5 +31,8 @@
     "gulp-sync": "^0.1.4",
     "gulp-uglify": "^2.0.0",
     "require-all": "^2.0.0"
+  },
+  "dependencies": {
+    "gulp-minify-css": "^1.2.4"
   }
 }

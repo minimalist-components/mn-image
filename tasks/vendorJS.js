@@ -14,5 +14,5 @@ function vendorJSTask() {
     .src(dependencies)
     .pipe(concat('vendor.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/'))
+    .pipe(gulp.dest('./docs/'))
 }

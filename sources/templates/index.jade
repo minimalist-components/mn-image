@@ -1,46 +1,36 @@
 html
   meta(name='viewport' content='width=device-width, user-scalable=no')
-  link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css')
+  base(href='/')
   link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
-  link(rel='stylesheet' href='mn-image.css')
+  //- link(rel='stylesheet' href='mn-image.css')
+  style
+    include ../../docs/vendor.css
+    include ../../dist/mn-image.css
   style.
-    body {
-      font-family: 'Open Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .content {
-      text-align: center;
-      margin-bottom: 50px;
-    }
-
     img {
       zoom: 50%;
     }
 
-    .content > * {
-      display: inline-block;
-      margin-left: 20px;
+    mn-image {margin: 1em}
+
+    @media (max-width: 959px) {
+      .images {
+        margin-top: 80px;
+      }
     }
 body
-  h1 Minimalist image
-  //- .content
-    a.no-outline(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
+  h2 mn-image
+  include github-corner
 
-    a.no-outline(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
-
-    a.no-outline(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
-
-  //- .content
-    a(href='#'): mn-image(src='http://i.dailymail.co.uk/i/pix/2015/11/12/01/2E5C4DE900000578-3314463-image-a-6_1447290394693.jpg')
-
-  //- .content
-    a.no-outline(href='#'): mn-image(src='https://assets.rbl.ms/2059944/980x.jpg')
-
-  .content
-    a.no-outline(href='#'): mn-image(src='imgs/koala.jpg')
+  .layout-fullscreen.layout-centered
+    .layout-column.layout-md-row.images
+      a(href='#'): mn-image(src='http://15858-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/sites/default/files/images/19bigstockKoalaBearsleepinginatree15688901jpg.jpg')
+      a(href='#'): mn-image(src='https://s-media-cache-ak0.pinimg.com/originals/90/23/ce/9023ce4196add2eb853627bbc53b272a.jpg')
+      a(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
   
-  
-  script(src='vendor.js')
-  script(src='mn-image.js')
+  script
+    include ../../docs/vendor.js
+    include ../../dist/mn-image.js
+  //- script(src='vendor.js')
+  //- script(src='mn-image.js')
 
