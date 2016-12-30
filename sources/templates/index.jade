@@ -1,11 +1,12 @@
 html
   meta(name='viewport' content='width=device-width, user-scalable=no')
   base(href='/')
-  link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans')
-  //- link(rel='stylesheet' href='mn-image.css')
-  style
-    include ../../docs/vendor.css
-    include ../../dist/mn-image.css
+
+  //- link(rel='stylesheet' href='https://rawgit.com/minimalist-components/mn-image/master/docs/vendor.css')
+  //- link(rel='stylesheet' href='https://rawgit.com/minimalist-components/mn-image/master/dist/mn-image.css')
+  link(rel='stylesheet' href='docs/vendor.css')
+  link(rel='stylesheet' href='dist/mn-image.css')
+
   style.
     img {
       zoom: 50%;
@@ -40,9 +41,8 @@ body
       })
     }
   
-  script
-    include ../../docs/vendor.js
-    include ../../dist/mn-image.js
-  //- script(src='vendor.js')
-  //- script(src='mn-image.js')
+  //- cript(src='https://rawgit.com/minimalist-components/mn-image/master/docs/vendor.js')
+  //- script(src='https://rawgit.com/minimalist-components/mn-image/master/dist/mn-image.js')
+  script(src='docs/vendor.js')
+  script(src='dist/mn-image.js')
 
