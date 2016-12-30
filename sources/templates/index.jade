@@ -2,16 +2,17 @@ html
   meta(name='viewport' content='width=device-width, user-scalable=no')
   base(href='/')
 
-  link(rel='stylesheet' href='https://rawgit.com/minimalist-components/mn-image/master/docs/vendor.css')
-  link(rel='stylesheet' href='https://rawgit.com/minimalist-components/mn-image/master/dist/mn-image.css')
-  //- link(rel='stylesheet' href='docs/vendor.css')
-  //- link(rel='stylesheet' href='dist/mn-image.css')
+  //- link(rel='stylesheet' href='https://rawgit.com/minimalist-components/mn-image/master/docs/vendor.css')
+  //- link(rel='stylesheet' href='https://rawgit.com/minimalist-components/mn-image/master/dist/mn-image.css')
+  link(rel='stylesheet' href='docs/vendor.css')
+  link(rel='stylesheet' href='dist/mn-image.css')
 
   style.
     .retina img {
       zoom: 50%
     }
-    @media (max-width: 959px) {
+
+    @media (max-width: 599px) {
       .docs {margin-top: 0}
 
       mn-image {margin: 1em 0}
@@ -25,7 +26,7 @@ body
   include github-corner
 
   .layout-fullscreen.layout-centered
-    .layout-container.layout-column.layout-md-row.demo
+    .layout-container.layout-column.layout-sm-row.demo
       a(href='#'): mn-image(src='http://15858-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/sites/default/files/images/19bigstockKoalaBearsleepinginatree15688901jpg.jpg')
       a(href='#'): mn-image(src='https://s-media-cache-ak0.pinimg.com/originals/90/23/ce/9023ce4196add2eb853627bbc53b272a.jpg')
       a(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
@@ -67,8 +68,8 @@ body
       })
     }
   
-  script(src='https://rawgit.com/minimalist-components/mn-image/master/docs/vendor.js')
-  script(src='https://rawgit.com/minimalist-components/mn-image/master/dist/mn-image.js')
-  //- script(src='docs/vendor.js')
-  //- script(src='dist/mn-image.js')
+  //- script(src='https://rawgit.com/minimalist-components/mn-image/master/docs/vendor.js')
+  //- script(src='https://rawgit.com/minimalist-components/mn-image/master/dist/mn-image.js')
+  script(src='docs/vendor.js')
+  script(src='dist/mn-image.js')
 

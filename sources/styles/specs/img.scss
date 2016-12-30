@@ -19,6 +19,12 @@ mn-image {
 a.no-outline {
   outline: 0;
   -webkit-tap-highlight-color: transparent;
+  margin: 1em;
+
+  mn-image {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 a:focus mn-image,
