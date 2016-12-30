@@ -8,15 +8,15 @@ html
   //- link(rel='stylesheet' href='dist/mn-image.css')
 
   style.
-    img {
-      zoom: 50%;
+    .retina img {
+      zoom: 50%
     }
-
-    mn-image {margin: 1em}
-
     @media (max-width: 959px) {
       .docs {margin-top: 0}
-      .images {
+
+      mn-image {margin: 1em 0}
+
+      .demo {
         margin-top: 80px;
       }
     }
@@ -25,7 +25,7 @@ body
   include github-corner
 
   .layout-fullscreen.layout-centered
-    .layout-column.layout-md-row.images
+    .layout-container.layout-column.layout-md-row.demo
       a(href='#'): mn-image(src='http://15858-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/sites/default/files/images/19bigstockKoalaBearsleepinginatree15688901jpg.jpg')
       a(href='#'): mn-image(src='https://s-media-cache-ak0.pinimg.com/originals/90/23/ce/9023ce4196add2eb853627bbc53b272a.jpg')
       a(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
@@ -41,13 +41,17 @@ body
     p In your html, you can use the tag <strong>mn-image</strong> e.g.
     mn-code.html.
       <mn-image src="path/to/an/image"></mn-image>
+    div.layout-row.align-center
+      mn-image.retina(src='https://assets.rbl.ms/2059944/980x.jpg')
 
     h3 3d perspective
-    p If you want a 3d perspective on mouse over, or focus (both only for desktop) just put the component inside a tag <strong>a</strong>
+    p If you want a 3d perspective on mouse over, or focus (but only for desktop) just put the component inside a tag <strong>a</strong>
     mn-code.html.
       <a href="#">
         <mn-image src="path/to/an/image"></mn-image>
       </a>
+    div.layout-row.align-center
+      a(href='#'): mn-image.retina(src='https://assets.rbl.ms/2059944/980x.jpg')
 
     p the available attributes are <strong>src</strong>, <strong>alt</strong>, <strong>title</strong>, and <strong>draggable</strong> 
 
