@@ -1,0 +1,73 @@
+html
+  meta(name='viewport' content='width=device-width, user-scalable=no')
+  base(href='/')
+
+  block styles
+    link(rel='stylesheet' href='docs/vendor.css')
+    link(rel='stylesheet' href='dist/mn-image.css')
+
+  style.
+    .retina img {
+      zoom: 50%
+    }
+
+    @media (max-width: 599px) {
+      .docs {margin-top: 0}
+
+      mn-image {margin: 1em 0}
+
+      .demo {
+        margin-top: 80px;
+      }
+    }
+body
+  h2 mn-image
+  include github-corner
+
+  .layout-fullscreen.layout-centered
+    .layout-container.layout-column.layout-sm-row.demo
+      a(href='#'): mn-image(src='http://15858-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/sites/default/files/images/19bigstockKoalaBearsleepinginatree15688901jpg.jpg')
+      a(href='#'): mn-image(src='https://s-media-cache-ak0.pinimg.com/originals/90/23/ce/9023ce4196add2eb853627bbc53b272a.jpg')
+      a(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
+
+  .docs.layout-container
+    mn-code.sh.
+      # to install this module
+      bower install --save mn-image
+
+    p Or just download the main files, located in dist/
+
+    h3 usage
+    p In your html, you can use the tag <strong>mn-image</strong> e.g.
+    mn-code.html.
+      <mn-image src="path/to/an/image"></mn-image>
+    div.layout-row.align-center
+      mn-image.retina(src='https://assets.rbl.ms/2059944/980x.jpg')
+
+    h3 3d perspective
+    p If you want a 3d perspective on mouse over, or focus (but only for desktop) just put the component inside a tag <strong>a</strong>
+    mn-code.html.
+      <a href="#">
+        <mn-image src="path/to/an/image"></mn-image>
+      </a>
+    div.layout-row.align-center
+      a(href='#'): mn-image.retina(src='https://assets.rbl.ms/2059944/980x.jpg')
+
+    p the available attributes are <strong>src</strong>, <strong>alt</strong>, <strong>title</strong>, and <strong>draggable</strong> 
+
+  script.
+    var images = document.querySelectorAll('mn-image')
+    Array
+      .from(images)
+      .forEach(disableClick)
+
+    function disableClick(image) {
+      image.addEventListener('click', function(event) {
+        event.preventDefault()
+      })
+    }
+  
+  block scripts
+    script(src='docs/vendor.js')
+    script(src='dist/mn-image.js')
+
