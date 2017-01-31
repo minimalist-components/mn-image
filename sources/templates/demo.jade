@@ -24,24 +24,25 @@ body
   h2 mn-image
   include github-corner
 
-  .layout-fullscreen.layout-centered
-    .layout-container.layout-column.layout-sm-row.demo
+  .mn-layout-fullscreen.mn-layout-centered
+    .mn-layout-container.mn-layout-column.mn-layout-sm-row.demo
       a(href='#'): mn-image(src='http://15858-presscdn-0-65.pagely.netdna-cdn.com/wp-content/uploads/sites/default/files/images/19bigstockKoalaBearsleepinginatree15688901jpg.jpg')
       a(href='#'): mn-image(src='https://s-media-cache-ak0.pinimg.com/originals/90/23/ce/9023ce4196add2eb853627bbc53b272a.jpg')
       a(href='#'): mn-image(src='http://66.media.tumblr.com/46179d3ef5b19665e5f1274bb0d84087/tumblr_o4zk6mEISo1qi4ucgo1_1280.jpg')
 
-  .docs.layout-container
+  .docs.mn-layout-container
     mn-code.sh.
       # to install this module
-      bower install --save mn-image
+      npm install --save mn-image
 
-    p Or just download the main files, located in dist/
+    p And bundle dependencies and main files in <strong>dist/</strong> with your preferred tool.
 
     h3 usage
     p In your html, you can use the tag <strong>mn-image</strong> e.g.
     mn-code.html.
       <mn-image src="path/to/an/image"></mn-image>
-    div.layout-row.align-center
+
+    .mn-layout-row.align-center
       mn-image.retina(src='https://assets.rbl.ms/2059944/980x.jpg')
 
     h3 3d perspective
@@ -50,10 +51,11 @@ body
       <a href="#">
         <mn-image src="path/to/an/image"></mn-image>
       </a>
-    div.layout-row.align-center
+
+    .mn-layout-row.align-center
       a(href='#'): mn-image.retina(src='https://assets.rbl.ms/2059944/980x.jpg')
 
-    p the available attributes are <strong>src</strong>, <strong>alt</strong>, <strong>title</strong>, and <strong>draggable</strong> 
+    p the available attributes are <em>src</em>, <em>alt</em>, <em>title</em>, and <em>draggable</em> 
 
   script.
     var images = document.querySelectorAll('mn-image')

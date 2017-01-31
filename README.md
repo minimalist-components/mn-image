@@ -1,6 +1,6 @@
-[![Bower version](https://badge.fury.io/bo/mn-image.svg)](https://badge.fury.io/bo/mn-image)
+[![npm version](https://badge.fury.io/js/mn-image.svg)](https://badge.fury.io/js/mn-image)
+[![Dependency Status](https://gemnasium.com/badges/github.com/minimalist-components/mn-image.svg)](https://gemnasium.com/github.com/minimalist-components/mn-image)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)   
-
 
 # mn-image
 
@@ -13,10 +13,10 @@ See the [demo](https://minimalist-components.github.io/mn-image/)
 ### Install
 
 ```sh
-bower install --save mn-image
+npm install --save mn-image
 ```
 
-Or just download the main files ```dist/mn-image.css, dist/mn-image.js``` in your project, and make a reference to their, like:
+And bundle dependencies and main files in [dist/](https://github.com/minimalist-components/mn-image/tree/master/dist) with your preferred tool.
 
 Or just download the main files, located in [dist/](https://github.com/minimalist-components/mn-image/tree/master/dist)
 
